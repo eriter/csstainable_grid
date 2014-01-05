@@ -1,7 +1,7 @@
 Gem::Specification.new do |csss|
   csss.name        = 'csstainable_grid'
   csss.authors     = ["wardpenney"]
-  csss.version     = '1.0.0'
+  csss.version     = '0.0.1'
   csss.summary     = "A sustainable SASS grid."
   csss.description = %q{A simple hello world gem}
   csss.files       = `git ls-files`.split("\n")

@@ -1,7 +1,6 @@
 require 'thor'
 require 'linguistics'
 
-
 class CsstainableGenerate < Thor
   Linguistics.use( :en )
 

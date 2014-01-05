@@ -1,3 +1,3 @@
-class csstainable_grid
+class CsstainableGrid
 
 end
