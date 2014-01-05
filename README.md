@@ -9,7 +9,6 @@ Install the gem and run the generator
 
 ```
 gem install 'csstainable-grid'
-ruby csstainable_generate.rb grid 12 --sass-library-dir 'app/assets/stylesheets/libraries/' --sass-grid-dir 'app/assets/stylesheets/sections/'
 ```
 ### What it generates
 The two files that compose the grid.
