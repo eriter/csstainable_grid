@@ -1,0 +1,39 @@
+//
+// CSSTAINABLE SETTINGS
+//
+$csstainable-max-site-width:   960px
+
+//
+// UTILITY MIXINS
+//
+=csstainable-clear
+  clear: both
+  &:after
+    content: " "
+    display: block
+    height: 0
+    font-size: 0
+    clear: both
+    visibility: hidden
+
+// GRID CONTAINER
+=csstainable-container
+  max-width: $csstainable-max-site-width
+  margin: 0 auto
+
+// GRID ROW
+=csstainable-row
+  width: 100%
+
+// GRID COLUMNS
+=csstainable-col($col-width, $col-count)
+  width: percentage($col-width / $col-count)
+  min-height: 1px
+  float: left
+  position: relative
+
+// GRID COLUMNS STANDARD
+=one-whole
+  +csstainable-col(1, 1)
+=one-half
+  +csstainable-col(1, 2)

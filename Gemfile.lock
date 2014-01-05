@@ -1,0 +1,14 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    linguistics (2.0.3)
+      loggability (~> 0.7)
+    loggability (0.8.1)
+    thor (0.18.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  linguistics
+  thor
