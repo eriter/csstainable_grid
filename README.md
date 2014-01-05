@@ -1,5 +1,8 @@
 # csstainable grid
-Generate an easy-to-use grid SASS from the command line. The grid may be used within markup or via mixins.
+Generate a world-class SASS grid from the command line.
+
+* Use markup classes or mixins
+* box-sizing: border-box means
 
 ## Installation
 Install the gem and run the generator
