@@ -38,8 +38,8 @@ class CsstainableGenerate < Thor
         c.times.each do |i|
           i = i+1
 
-          output << "=csstainable-col-#{i.en.numwords}-#{c.en.ordinate}s"
-          output << "  +csstainable-col(#{i}, #{c})"
+          output << "=cg-col-#{i.en.numwords}-#{c.en.ordinate}s"
+          output << "  +cg-col(#{i}, #{c})"
         end
       end
       output << "\n"
@@ -62,8 +62,8 @@ class CsstainableGenerate < Thor
         c.times.each do |i|
           i = i+1
 
-          output << ".csstainable-col-#{i.en.numwords}-#{c.en.ordinate}s"
-          output << "  +csstainable-col-#{i.en.numwords}-#{c.en.ordinate}s"
+          output << ".cg-col-#{i.en.numwords}-#{c.en.ordinate}s"
+          output << "  +cg-col-#{i.en.numwords}-#{c.en.ordinate}s"
         end
       end
       output << "\n"

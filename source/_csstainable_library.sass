@@ -5,7 +5,7 @@ $csstainable-max-site-width:   960px
 $gutter:                       10px
 
 // CSSTAINABLE UTILITIES
-=csstainable-clear
+=cg-clear
   clear: both
   &:after
     content: " "
@@ -16,77 +16,77 @@ $gutter:                       10px
     visibility: hidden
 
 // CSSTAINABLE PADDING
-=pad-top
+=cg-pad-top
   padding-top: $gutter
-=pad-right
+=cg-pad-right
   padding-right: $gutter
-=pad-bottom
+=cg-pad-bottom
   padding-bottom: $gutter
-=pad-left
+=cg-pad-left
   padding-left: $gutter
-=pad-top-double
+=cg-pad-top-double
   padding-top: $gutter * 2
-=pad-right-double
+=cg-pad-right-double
   padding-right: $gutter * 2
-=pad-bottom-double
+=cg-pad-bottom-double
   padding-bottom: $gutter * 2
-=pad-left-double
+=cg-pad-left-double
   padding-left: $gutter * 2
-=pad-top-triple
+=cg-pad-top-triple
   padding-top: $gutter * 3
-=pad-right-triple
+=cg-pad-right-triple
   padding-right: $gutter * 3
-=pad-bottom-triple
+=cg-pad-bottom-triple
   padding-bottom: $gutter * 3
-=pad-left-triple
+=cg-pad-left-triple
   padding-left: $gutter * 3
 
 // CSSTAINABLE MARGIN
-=margin-top
+=cg-margin-top
   margin-top: $gutter
-=margin-right
+=cg-margin-right
   margin-right: $gutter
-=margin-bottom
+=cg-margin-bottom
   margin-bottom: $gutter
-=margin-left
+=cg-margin-left
   margin-left: $gutter
-=margin-top-double
+=cg-margin-top-double
   margin-top: $gutter * 2
-=margin-right-double
+=cg-margin-right-double
   margin-right: $gutter * 2
-=margin-bottom-double
+=cg-margin-bottom-double
   margin-bottom: $gutter * 2
-=margin-left-double
+=cg-margin-left-double
   margin-left: $gutter * 2
-=margin-top-triple
+=cg-margin-top-triple
   margin-top: $gutter * 3
-=margin-right-triple
+=cg-margin-right-triple
   margin-right: $gutter * 3
-=margin-bottom-triple
+=cg-margin-bottom-triple
   margin-bottom: $gutter * 3
-=margin-left-triple
+=cg-margin-left-triple
   margin-left: $gutter * 3
 
 // CSSTAINABLE GRID CONTAINER
-=csstainable-container
+=cg-container
   max-width: $csstainable-max-site-width
   margin: 0 auto
 
 // CSSTAINABLE GRID ROW
-=csstainable-row
+=cg-row
   width: 100%
 
 // CSSTAINABLE GRID COLUMNS
-=csstainable-col($col-width, $col-count)
+=cg-col($col-width, $col-count)
   width: percentage($col-width / $col-count)
   min-height: 1px
   float: left
   position: relative
 
 // CSSTAINABLE GRID COLUMNS STANDARD
-=one-whole
-  +csstainable-col(1, 1)
-=one-half
-  +csstainable-col(1, 2)
+=cg-one-whole
+  +cg-col(1, 1)
+=cg-one-half
+  +cg-col(1, 2)
 
 // CSSTAINABLE GRID COLUMNS
