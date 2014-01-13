@@ -12,7 +12,7 @@ gem install 'csstainable_grid'
 Then, run the generator with the paths it needs (see Options below)
 
 ```
-gem install 'csstainable_grid'
+csstainable_grid --columns 24 --sass-library-dir . --sass-grid-dir .
 ```
 
 
