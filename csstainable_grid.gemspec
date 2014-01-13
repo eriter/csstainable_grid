@@ -1,16 +1,17 @@
-Gem::Specification.new do |csss|
-  csss.name        = 'csstainable_grid'
-  csss.email        = 'csstainable@gmail.com'
-  csss.authors     = ["wardpenney"]
-  csss.version     = '0.0.1'
-  csss.summary     = "A sustainable SASS grid."
-  csss.description = %q{A simple hello world gem}
-  csss.files       = `git ls-files`.split("\n")
-  csss.homepage    =
-    'https://github.com/wardpenney/csstainable_grid'
-  csss.license       = 'MIT'
+Gem::Specification.new do |s|
+  s.name        = 'csstainable_grid'
+  s.version     = '0.0.1'
+  s.licenses    = ['MIT']
+  s.summary     = 'A sustainable SASS grid.'
+  s.description = 'Generate a world-class SASS grid from the command line.'
+  s.authors     = ['wardpenney']
+  s.email       = 'csstainable@gmail.com'
+  s.files       = `git ls-files`.split("\n")
+  s.homepage    = 'https://github.com/wardpenney/csstainable_grid'
 
-  csss.add_dependency "thor"
-  csss.add_dependency "linguistics"
-  csss.executables   = csss.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+
+  s.add_dependency 'thor'
+  s.add_dependency 'linguistics'
+
+  s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
 end
