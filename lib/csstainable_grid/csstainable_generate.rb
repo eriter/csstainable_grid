@@ -5,9 +5,12 @@ class CsstainableGenerate < Thor
   Linguistics.use( :en )
 
   desc "grid", "A fresh hot csstainable grid"
-  option :sass_library_dir, :required => true, :type => :string, :aliases => :sld
-  option :sass_grid_dir, :required => true,  :type => :string, :aliases => :sgd
+  option :columns, :required => true, :type => :number, :aliases => :c
+  option :sass_library_dir, :required => true, :type => :string, :aliases => :l
+  option :sass_grid_dir, :required => true,  :type => :string, :aliases => :g
   long_desc <<-LONGDESC
+
+    Call with -columns [-c] --sass_library_dir [-l] --sass_grid_dir [-g]
 
     Get two SASS files for your grid:
     csstainable library: mixins, variables and other non-rendering SASS
@@ -17,7 +20,7 @@ class CsstainableGenerate < Thor
 
   LONGDESC
 
-  def grid(columns, sass_library_dir: nil)
+  def grid
     puts "Baking one grid of #{columns} columns..."
     columns = columns.to_i
 
@@ -25,16 +28,17 @@ class CsstainableGenerate < Thor
     path_grid = File.expand_path(File.join(options[:sass_grid_dir], '_csstainable_grid.sass'))
 
     puts "Building _csstainable_library.sass"
+    FileUtils.mkdir_p(File.dirname(path_library))
     File.open(path_library, 'w') do |library|
       to_append = File.read("source/_csstainable_library.sass")
       library.puts to_append
 
       output = []
 
-      columns.times.each do |c|
+      options[:columns].times.each do |c|
         c = c+1
 
-        output << "\n// GRID COLUMNS #{c} of #{columns}"
+        output << "\n// GRID COLUMNS #{c} of #{options[:columns]}"
         c.times.each do |i|
           i = i+1
 
@@ -55,10 +59,10 @@ class CsstainableGenerate < Thor
 
       output = []
 
-      columns.times.each do |c|
+      options[:columns].times.each do |c|
         c = c+1
 
-        output << "\n// GRID COLUMNS #{c} of #{columns}"
+        output << "\n// GRID COLUMNS #{c} of #{options[:columns]}"
         c.times.each do |i|
           i = i+1
 
