@@ -21,8 +21,8 @@ class CsstainableGenerate < Thor
     puts "Baking one grid of #{columns} columns..."
     columns = columns.to_i
 
-    path_library = File.expand_path(File.join(options[:sass_library_dir], '_library.sass'))
-    path_grid = File.expand_path(File.join(options[:sass_grid_dir], '_grid.sass'))
+    path_library = File.expand_path(File.join(options[:sass_library_dir], '_csstainable_library.sass'))
+    path_grid = File.expand_path(File.join(options[:sass_grid_dir], '_csstainable_grid.sass'))
 
     puts "Building _csstainable_library.sass"
     File.open(path_library, 'w') do |library|
