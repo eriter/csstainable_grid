@@ -1,5 +1,6 @@
 Gem::Specification.new do |csss|
   csss.name        = 'csstainable_grid'
+  csss.email        = 'csstainable@gmail.com'
   csss.authors     = ["wardpenney"]
   csss.version     = '0.0.1'
   csss.summary     = "A sustainable SASS grid."
