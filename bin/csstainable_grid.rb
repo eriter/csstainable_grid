@@ -2,8 +2,13 @@
 
 require 'csstainable_grid'
 
-p = File.join(File.expand_path("../../.", __FILE__), 'lib', 'csstainable_grid', 'csstainable_generate.rb')
+class CsstainableGridExecutable
+  def CsstainableGridExecutable.call_generator(args = ['12', '--sass_library_dir','.','--sass_grid_dir','.'])
+    executable_file = File.join(File.expand_path("../../.", __FILE__), 'lib', 'csstainable_grid', 'csstainable_generate.rb')
+    executable_command = "ruby #{executable_file} #{args.join(' ')}"
 
-cmd = "ruby #{p} #{ARGV.join(" ")}"
+    exec executable_command
+  end
+end
 
-exec cmd
+CsstainableGridExecutable.call_generator(ARGV)
