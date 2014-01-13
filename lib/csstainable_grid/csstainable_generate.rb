@@ -6,7 +6,7 @@ class CsstainableGenerate < Thor
 
   desc "grid", "A fresh hot csstainable grid"
   option :sass_library_dir, :required => true, :type => :string, :aliases => :sld
-  option :sass_grid_dir, :required => true, :type => :string, :aliases => :sgd
+  option :sass_grid_dir, :required => true,  :type => :string, :aliases => :sgd
   long_desc <<-LONGDESC
 
     Get two SASS files for your grid:
