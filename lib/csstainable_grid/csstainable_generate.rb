@@ -4,7 +4,7 @@ require 'linguistics'
 class CsstainableGenerate < Thor
   Linguistics.use( :en )
 
-  desc "grid", "A fresh hot csstainable grid"
+  desc "csstainable_grid", "A fresh hot csstainable grid"
   option :columns, :required => true, :type => :numeric, :aliases => :c
   option :sass_library_dir, :required => true, :type => :string, :aliases => :l
   option :sass_grid_dir, :required => true,  :type => :string, :aliases => :g
@@ -20,7 +20,7 @@ class CsstainableGenerate < Thor
 
   LONGDESC
 
-  def grid
+  def csstainable_grid
     columns = options[:columns].to_i
     puts "Baking one grid of #{columns} columns..."
 
