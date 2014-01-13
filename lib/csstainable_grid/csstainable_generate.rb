@@ -5,7 +5,7 @@ class CsstainableGenerate < Thor
   Linguistics.use( :en )
 
   desc "grid", "A fresh hot csstainable grid"
-  option :columns, :required => true, :type => :number, :aliases => :c
+  option :columns, :required => true, :type => :numeric, :aliases => :c
   option :sass_library_dir, :required => true, :type => :string, :aliases => :l
   option :sass_grid_dir, :required => true,  :type => :string, :aliases => :g
   long_desc <<-LONGDESC
@@ -21,8 +21,8 @@ class CsstainableGenerate < Thor
   LONGDESC
 
   def grid
+    columns = options[:columns].to_i
     puts "Baking one grid of #{columns} columns..."
-    columns = columns.to_i
 
     path_library = File.expand_path(File.join(options[:sass_library_dir], '_csstainable_library.sass'))
     path_grid = File.expand_path(File.join(options[:sass_grid_dir], '_csstainable_grid.sass'))
@@ -35,10 +35,10 @@ class CsstainableGenerate < Thor
 
       output = []
 
-      options[:columns].times.each do |c|
+      columns.times.each do |c|
         c = c+1
 
-        output << "\n// GRID COLUMNS #{c} of #{options[:columns]}"
+        output << "\n// GRID COLUMNS #{c} of #{columns}"
         c.times.each do |i|
           i = i+1
 
@@ -59,10 +59,10 @@ class CsstainableGenerate < Thor
 
       output = []
 
-      options[:columns].times.each do |c|
+      columns.times.each do |c|
         c = c+1
 
-        output << "\n// GRID COLUMNS #{c} of #{options[:columns]}"
+        output << "\n// GRID COLUMNS #{c} of #{columns}"
         c.times.each do |i|
           i = i+1
 
